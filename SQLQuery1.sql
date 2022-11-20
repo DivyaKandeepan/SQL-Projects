@@ -1,3 +1,4 @@
+--Dispay data
 select*from coviddata..coviddeaths
 -- this where condition helps to removes the  continent from location column 
 --eg. we need only coutries like india and more world, north america etc..
