@@ -65,7 +65,7 @@ order by highest_infected_percentage desc;
 
 --LISTING COUNRIES HAVE HIGHEST DEATH RATE COMPARED TO POPULATION
 
---(we using cast because total_deaths is nvarchar date so it doesn't corret values when we perform aggregate function so we used cast to convert into int)
+--( cast is used here because total_deaths is nvarchar date so it doesn't corret values when we perform aggregate function so we used cast to convert into int)
 select location,population,max(cast(total_deaths as int)) Highest_death_rate,Max(cast(total_deaths as int)*100) as population_percentage_death_cases
 from coviddata..coviddeaths 
 --where location like '%India%'
